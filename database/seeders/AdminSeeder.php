@@ -16,7 +16,7 @@ class AdminSeeder extends Seeder {
     public function run(): void {
         $admin = User::updateOrCreate([
             'id' => 1,
-            'name' => 'nick',
+            'name' => 'admin',
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => Hash::make(env('DEFAULT_SEED_PASSWORD', '123')),
