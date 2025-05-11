@@ -16,7 +16,7 @@
             @endforeach
         </x-input.select>
 
-        <hr class="text-dark-gamma" />
+        <hr class="text-light-gamma" />
 
         <div class="flex flex-row gap-2 mt-2">
             <button

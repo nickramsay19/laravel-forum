@@ -19,8 +19,8 @@
         
         <title>{{ isset($title) ? ($title . ' | ') : '' }} apparatchiks.exnet.su</title>
     </head>
-    <body class="bg-gray-50 dark:bg-dark-alpha dark:text-rose-50 m-0 text-sm font-mono" hx-headers='{"X-CSRF-TOKEN": "{{ csrf_token() }}"}'>
-        <div class="bg-gray-50 dark:bg-dark-beta rounded-sm w-full md:w-60/100 m-0 md:m-auto mt-0 md:mt-1 p-1 px-2">
+    <body class="bg-light-alpha bg-gray-50 m-0 text-dark-gamma text-md font-mono" hx-headers='{"X-CSRF-TOKEN": "{{ csrf_token() }}"}'>
+        <div class="bg-light-alpha rounded-sm w-full md:w-60/100 m-0 md:m-auto mt-0 md:mt-2 p-1 px-2">
             <header class="mb-2">
                 <div class="flex flex-row gap-1 justify-between w-full">
                     <span class="flex flex-inline align-middle gap-1 md:mb-2">
@@ -34,7 +34,7 @@
                         @endfor
 
                         @if (count(Request::segments()))
-                            <x-link class="!hidden md:!inline dark:text-rose-50">{{ Str::lower($attributes->get('title', 'apparatchiks.exnet.su')) }}</x-link>
+                            <x-link class="!text-dark-gamma !hidden md:!inline ">{{ Str::lower($attributes->get('title', 'apparatchiks.exnet.su')) }}</x-link>
                         @endif
 
                         </div>

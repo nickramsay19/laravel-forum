@@ -23,7 +23,7 @@
                         </span>
                     @endcanany
                 </div>
-                <hr class="text-dark-gamma last:hidden" />
+                <hr class="text-light-gamma last:hidden" />
             @endforeach 
         </div>
     </div>

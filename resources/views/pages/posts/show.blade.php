@@ -13,7 +13,7 @@
 
         <div class="post-body">{!! Illuminate\Mail\Markdown::parse($post->body) !!}</div>
 
-        <hr class="text-dark-gamma last:hidden my-6" />
+        <hr class="text-light-gamma last:hidden my-6" />
 
         @if (Auth::check())
             <h3 class="text-lg font-semibold">Post a comment</h3>
@@ -25,7 +25,7 @@
                 <div class="flex flex-row gap-2 mt-2">
                     <button
                         type="submit"
-                        class="bg-dark-beta hover:bg-accent border border-accent text-light cursor-pointer px-0.5"
+                        class="hover:bg-accent border border-accent cursor-pointer px-0.5"
                     >
                         Save
                     </button>

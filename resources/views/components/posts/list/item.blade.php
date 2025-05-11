@@ -7,7 +7,7 @@
     $readonly = boolval($readonly);
 @endphp
 
-<article dir="ltr" {{ $attributes->merge(['class' => 'flex flex-col justify-between gap-1 border-l-2 border-accent pl-1']) }}>
+<article dir="ltr" {{ $attributes->merge(['class' => 'flex flex-col justify-between gap-']) }}>
     <div class="flex flex-row group">
         <x-link href="/posts/{{ $post->slug }}" class="align-top basis-full grow font-semibold group-hover:underline">{{ $post->title }}</x-link>
 
@@ -17,7 +17,10 @@
     </div>
 
     <span>
-        <span>{{ $post->created_at_date }}</span>
+        
+        <span class="text-dark-epsilon">{{ $post->created_at_date }}</span>
+        <span class="text-accent">{{ $post->author->name }}</span>
+
         @foreach ($post->tags as $tag)
             <x-tag-link :tag="$tag" />
         @endforeach

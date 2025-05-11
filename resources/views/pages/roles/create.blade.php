@@ -16,7 +16,7 @@
             @endforeach
         </x-input.select>
 
-        <hr class="text-dark-gamma" />
+        <hr class="text-light-gamma" />
 
         <x-input type="submit" value="Create" class="mt-2" inline />
     </x-form>

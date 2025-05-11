@@ -114,6 +114,13 @@
     --color-dark-forest-green-800: #07450C;
     --color-dark-forest-green-900: #002D03;
 
+    --color-persian-red-400: #D14545;
+    --color-persian-red-500: #CC3333;
+    --color-persian-red-600: #B52D2D;
+    --color-persian-red-700: #9E2727;
+    --color-persian-red-800: #882222;
+    --color-persian-red-900: #711C1C;
+
     --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', 'Segoe UI Mono', 'Liberation Mono', Menlo, Monaco, Consolas, monospace;
 }
 
@@ -131,8 +138,8 @@
     --color-dark-zeta: var(--color-chicago-300);
 
     /* color theme */
-    --color-accent: var(--color-dark-forest-green-800);
-    --color-accent-light: var(--color-dark-forest-green-500);
+    --color-accent: var(--color-persian-red-500);
+    --color-accent-light: var(--color-persian-red-400);
     --color-disabled: var(--color-light-gamma);
 }
 
@@ -167,7 +174,7 @@ input[type=submit], button {
 }
 
 input[type=submit]:hover, button:hover {
-    background-color: var(--color-accent);
+    
 }
 
 ::placeholder {

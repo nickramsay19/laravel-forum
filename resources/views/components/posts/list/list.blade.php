@@ -17,6 +17,6 @@
     @foreach ($posts as $post)
         <x-posts.list.item :post="$post" readonly="{{ $readonly }}" />
 
-        <hr class="text-dark-gamma last:hidden" />
+        <hr class="text-light-beta last:hidden" />
     @endforeach
 </div>

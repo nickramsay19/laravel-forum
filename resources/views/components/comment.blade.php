@@ -32,13 +32,13 @@
                         <button
                             type="button"
                             onclick="toggleReplyForm({{ $comment->id }})" 
-                            class="bg-dark-beta hover:!bg-red-500 border !border-red-500 text-light cursor-pointer px-0.5"
+                            class="hover:!bg-red-500 border !border-red-500 cursor-pointer px-0.5"
                         >
                             Cancel
                         </button>
                         <button
                             type="submit"
-                            class="bg-dark-beta hover:bg-accent border border-accent text-light cursor-pointer px-0.5"
+                            class="hover:bg-accent border border-accent cursor-pointer px-0.5"
                         >
                             Save
                         </button>

@@ -14,12 +14,12 @@
             @endforeach
         </x-input.select>
 
-        <hr class="text-dark-gamma" />
+        <hr class="text-light-beta" />
 
         <div class="flex flex-row gap-2 mt-2">
             <button
                 type="submit"
-                class="bg-dark-beta hover:bg-accent border border-accent text-light cursor-pointer px-0.5"
+                class="hover:bg-accent border border-accent text-light cursor-pointer px-0.5"
             >
                 Save
             </button>
