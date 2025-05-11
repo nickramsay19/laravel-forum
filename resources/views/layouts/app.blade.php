@@ -9,7 +9,7 @@
         <meta name="keywords" content="dev, developer, programming, c, cpp, python prog, math, aus, australia, sydney, nsw, algo, debug, books, memory" />
         <meta name="viewport" content="width=device-width" />
 
-        <link rel="alternate" type="application/rss+xml" title="nickramsay.dev" href="https://nickramsay.dev/posts/feed/rss" />
+        <link rel="alternate" type="application/rss+xml" title="apparatchiks.exnet.su" href="https://apparatchiks.exnet.su/posts/feed/rss" />
 
         <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/gh/Emtyloc/json-enc-custom@main/json-enc-custom.js"></script>
@@ -17,15 +17,15 @@
         
         @vite(['resources/css/app.css'])
         
-        <title>{{ isset($title) ? ($title . ' | ') : '' }} nickramsay.dev</title>
+        <title>{{ isset($title) ? ($title . ' | ') : '' }} apparatchiks.exnet.su</title>
     </head>
-    <body class="bg-dark-alpha text-rose-50 m-0 text-sm font-mono" hx-headers='{"X-CSRF-TOKEN": "{{ csrf_token() }}"}'>
-        <div class="bg-dark-beta rounded-sm w-full md:w-60/100 m-0 md:m-auto mt-0 md:mt-1 p-1 px-2">
+    <body class="bg-gray-50 dark:bg-dark-alpha dark:text-rose-50 m-0 text-sm font-mono" hx-headers='{"X-CSRF-TOKEN": "{{ csrf_token() }}"}'>
+        <div class="bg-gray-50 dark:bg-dark-beta rounded-sm w-full md:w-60/100 m-0 md:m-auto mt-0 md:mt-1 p-1 px-2">
             <header class="mb-2">
                 <div class="flex flex-row gap-1 justify-between w-full">
                     <span class="flex flex-inline align-middle gap-1 md:mb-2">
                         <div class="inline align-middle [&_span]:first:text-bright *:inline *:align-middle *:my-auto">
-                            <x-nav.link to="home" class="">nickramsay.dev</x-nav.link> 
+                            <x-nav.link to="home" class="">apparatchiks.exnet.su</x-nav.link> 
                             <span>/</span>
 
                         @for ($i = 0; $i < count(Request::segments())-1; $i++)
@@ -34,7 +34,7 @@
                         @endfor
 
                         @if (count(Request::segments()))
-                            <x-link class="!hidden md:!inline text-rose-50">{{ Str::lower($attributes->get('title', 'Nicholas Ramsay')) }}</x-link>
+                            <x-link class="!hidden md:!inline dark:text-rose-50">{{ Str::lower($attributes->get('title', 'apparatchiks.exnet.su')) }}</x-link>
                         @endif
 
                         </div>
@@ -47,21 +47,7 @@
                 </div>
 
                 <nav class="flex justify-between mb-1 border-b-2 border-b-accent align-middle">
-                    <h1 class="border-b-0 heading-1 text-accent font-bold border-0 self-end" style="color: #74bfff;">{{ $attributes->get('title', 'Nicholas Ramsay') ?? 'Nicholas Ramsay' }}</h1>
-                    
-                    <div class="hidden md:flex justify-end gap-3 mr-2 mb-1 hidden">
-                        <x-nav.social-icon-link href="https://github.com/nickramsay19" aria-labelledby="Github">
-                            <x-icon.github class="w-7" />
-                        </x-nav.social-icon-link>
-
-                        <x-nav.social-icon-link href="https://twitter.com/nickramsay15" aria-labelledby="Twitter">
-                            <x-icon.twitter  lass="w-7"/>
-                        </x-nav.social-icon-link>
-
-                        <x-nav.social-icon-link href="https://www.linkedin.com/in/nicholas-ramsay-01799b147" aria-labelledby="LinkedIn">
-                            <x-icon.linkedin class="w-7"/>
-                        </x-nav.social-icon-link>
-                    </div>
+                    <h1 class="border-b-0 heading-1 text-accent font-bold border-0 self-end">{{ $attributes->get('title', 'apparatchiks.exnet.su') ?? 'apparatchiks.exnet.su' }}</h1>
                 </nav>
             </header>
 
@@ -70,7 +56,7 @@
             </main>
 
             <footer id="footer" class="text-center block mt-5">
-                nickramsay.dev | 
+                apparatchiks.exnet.su | 
                 <x-nav.link to="home">home</x-nav.link>
                 <x-nav.link to="posts">posts</x-nav.link>
 

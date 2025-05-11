@@ -50,11 +50,10 @@
     --color-chicago-900: #3d3d3d;
     --color-chicago-950: #262626;
 
-
     --color-neutral-50: #fafafa;  
     --color-neutral-100: #f5f5f5;  
     --color-neutral-125: #f1f1f1;
-    --color-neutral-132: #eeeeee; /* gallery-132 */
+    --color-neutral-132: #eeeeee; /* gallery-100 */
     --color-neutral-150: #ededed;
     --color-neutral-175: #e9e9e9;
     --color-neutral-200: #e5e5e5;  
@@ -81,7 +80,6 @@
     --color-neutral-937: #0d0d0d;
     --color-neutral-950: #0a0a0a;
     
-
     --color-storm-dust-50: #f6f6f6;
     --color-storm-dust-100: #e7e7e7;
     --color-storm-dust-200: #d1d1d1;
@@ -106,6 +104,15 @@
     --color-malibu-900: #1a438e;
     --color-malibu-950: #152a56;
 
+    --color-dark-forest-green-100: #CEE7D0;
+    --color-dark-forest-green-200: #A2D0A6;
+    --color-dark-forest-green-300: #7BB980;
+    --color-dark-forest-green-400: #5AA260;
+    --color-dark-forest-green-500: #3D8A44;
+    --color-dark-forest-green-600: #26732C;
+    --color-dark-forest-green-700: #145C1A;
+    --color-dark-forest-green-800: #07450C;
+    --color-dark-forest-green-900: #002D03;
 
     --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', 'Segoe UI Mono', 'Liberation Mono', Menlo, Monaco, Consolas, monospace;
 }
@@ -113,6 +120,8 @@
 @theme inline {
     /* shades */
     --color-light-alpha: var(--color-gallery-100);
+    --color-light-beta: var(--color-gallery-200);
+    --color-light-gamma: var(--color-gallery-300);
 
     --color-dark-alpha: var(--color-cod-gray-950);
     --color-dark-beta: var(--color-woodsmoke-950);
@@ -122,15 +131,14 @@
     --color-dark-zeta: var(--color-chicago-300);
 
     /* color theme */
-    --color-accent: var(--color-malibu-400);
-    --color-accent-light: var(--color-malibu-300);
-    --color-disabled: var(--color-dark-epsilon);
+    --color-accent: var(--color-dark-forest-green-800);
+    --color-accent-light: var(--color-dark-forest-green-500);
+    --color-disabled: var(--color-light-gamma);
 }
 
 .heading-1 {
     font-size: 1.5em; 
     text-decoration: none; 
-    /*border-bottom: 2px solid var(--color-malibu-250); */
 }
 
 .heading-2, h2 { 
@@ -145,16 +153,13 @@ h2::before {
 blockquote p {
     font-style: italic;
     padding: 0.9em;
-    background-color: var(--color-bg);
 }
 
 /* == FORMS == */
 input, textarea, button {
-    border-color: #74bfff; 
+    border-color: var(--color-accent);
     border-style: solid; 
     border-width: 1px; 
-    background-color: #171717; 
-    color: #eeeeee;
 }
 
 input[type=submit], button {
@@ -162,8 +167,7 @@ input[type=submit], button {
 }
 
 input[type=submit]:hover, button:hover {
-    background-color: #74bfff;
-    color: #171717;
+    background-color: var(--color-accent);
 }
 
 ::placeholder {
