@@ -29,19 +29,18 @@
                     <input type="hidden" name="reference_id" value="{{ $comment->id }}" />
                     <x-input name="body" type="textarea" placeholder="The reply's content" rows="3" class="mt-1" />
                     <div class="flex flex-row gap-2 mt-2">
-                        <button
+                        <x-button
                             type="button"
                             onclick="toggleReplyForm({{ $comment->id }})" 
-                            class="hover:!bg-red-500 border !border-red-500 cursor-pointer px-0.5"
+                            class="hover:!bg-red-500 border !border-red-500"
                         >
                             Cancel
-                        </button>
-                        <button
+                        </x-button>
+                        <x-button
                             type="submit"
-                            class="hover:bg-accent border border-accent cursor-pointer px-0.5"
                         >
                             Save
-                        </button>
+                        </x-button>
                     </div>
                 </form>
             </div>

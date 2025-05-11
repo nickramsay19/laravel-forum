@@ -1,0 +1,1 @@
+<hr {{ $attributes->merge(['class' => 'text-bg-gamma last:hidden']) }} />

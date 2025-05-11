@@ -121,25 +121,58 @@
     --color-persian-red-800: #882222;
     --color-persian-red-900: #711C1C;
 
-    --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', 'Segoe UI Mono', 'Liberation Mono', Menlo, Monaco, Consolas, monospace;
+    /* https://colors.raulcarini.dev/palettes */
+    --color-sunset-red: #FF6B6B;
+    --color-sunset-orange: #FFA06B;
+    --color-sunset-yellow: #FFD56B;
+    --color-sunset-pink: #FF6BE3;
+    --color-sunset-light-orange: #FF9F6B;
+
+    --color-monochrome-black: #000000;
+    --color-monochrome-dark-gray: #333333;
+    --color-monochrome-medium-gray: #666666;
+    --color-monochrome-light-gray: #999999;
+    --color-monochrome-very-light-gray: #CCCCCC;
+
+    --color-ocean-turquoise: #1ABC9C;
+    --color-ocean-dark-cyan: #16A085;
+    --color-ocean-blue: #3498DB;
+    --color-ocean-dark-blue: #2980B9;
+    --color-ocean-navy: #34495E;
+
+    --color-cyberpunk-magenta: #FF00FF;
+    --color-cyberpunk-cyan: #00FFFF;
+    --color-cyberpunk-orange: #FF9900;
+    --color-cyberpunk-blue: #0000FF;
+    --color-cyberpunk-green: #33FF33;
+
+    --color-nordic-snow: #ECEFF4;
+    --color-nordic-ice: #D8DEE9;
+    --color-nordic-slate: #4C566A;
+    --color-nordic-frost: #5E81AC;
+    --color-nordic-arctic: #88C0D0;
+
+    --font-mono: 'Segoe UI Mono', 'Liberation Mono', "Spline Sans Mono", "B612 Mono", "Azeret Mono", ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Monaco, Consolas, monospace;
 }
 
 @theme inline {
-    /* shades */
-    --color-light-alpha: var(--color-gallery-100);
-    --color-light-beta: var(--color-gallery-200);
-    --color-light-gamma: var(--color-gallery-300);
 
-    --color-dark-alpha: var(--color-cod-gray-950);
-    --color-dark-beta: var(--color-woodsmoke-950);
-    --color-dark-gamma: var(--color-chicago-950);
-    --color-dark-delta: var(--color-neutral-700);
-    --color-dark-epsilon: var(--color-chicago-600);
-    --color-dark-zeta: var(--color-chicago-300);
+    /* = FOREGROUND = */
+    --color-fg-alpha: var(--color-monochrome-dark-gray);
+    --color-fg-beta: var(--color-nordic-slate);
+    --color-fg-gamma: var(--color-nordic-slate);
 
-    /* color theme */
-    --color-accent: var(--color-persian-red-500);
-    --color-accent-light: var(--color-persian-red-400);
+    /* = BACKGROUND = */
+    --color-bg-alpha: var(--color-nordic-snow);
+    --color-bg-beta: var(--color-nordic-snow);
+    --color-bg-gamma: var(--color-monochrome-very-light-gray);
+    --color-bg-delta: var(--color-neutral-700);
+    --color-bg-epsilon: var(--color-chicago-600);
+    --color-bg-zeta: var(--color-chicago-300);
+
+    /* = PALETTE = */
+    --color-accent: var(--color-indigo-800);
+    --color-accent-light: var(--color-slate-950);
     --color-disabled: var(--color-light-gamma);
 }
 
@@ -158,7 +191,7 @@ h2::before {
 }
 
 blockquote p {
-    font-style: italic;
+    font-style: oblique;
     padding: 0.9em;
 }
 

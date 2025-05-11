@@ -13,7 +13,7 @@
 
         <div class="post-body">{!! Illuminate\Mail\Markdown::parse($post->body) !!}</div>
 
-        <hr class="text-light-gamma last:hidden my-6" />
+        <x-divider class="my-3" />
 
         @if (Auth::check())
             <h3 class="text-lg font-semibold">Post a comment</h3>
@@ -23,12 +23,7 @@
                 <input type="hidden" name="reference_id" :value="null" />
                 <x-input name="body" type="textarea" placeholder="The comment's content" rows="3" class="mt-1" />
                 <div class="flex flex-row gap-2 mt-2">
-                    <button
-                        type="submit"
-                        class="hover:bg-accent border border-accent cursor-pointer px-0.5"
-                    >
-                        Save
-                    </button>
+                    <x-button type="submit">Save</x-button>
                 </div>
             </form>
         @endif

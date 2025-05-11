@@ -15,23 +15,21 @@
         <hr class="text-light-beta " />
 
         <div class="flex flex-row gap-2 mt-2">
-            <button
+            <x-button
                 type="submit"
                 name="published" 
                 value="0"
-                class="bg-dark-beta hover:bg-accent border border-accent text-light cursor-pointer px-0.5"
             >
-                Save
-            </button>
+                Saves
+            </x-button>
 
-            <button
+            <x-button
                 type="submit"
                 name="published" 
                 value="1"
-                class="bg-dark-beta hover:bg-accent border border-accent text-light cursor-pointer px-0.5"
             >
                 Save & Publish
-            </button>
+            </x-button>
         </div>
     </form>
 </x-layout>

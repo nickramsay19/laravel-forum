@@ -1,8 +1,11 @@
-<x-layout title="apparatchiks.exnet.su">
+<x-layout title="The Apparatchiks Forum">
     <section class="mt-2">
+
+        
+
         <x-posts.list :posts="$posts" readonly />
 
-        <hr class="text-light-beta mt-4 mb-2" />
+        <x-divider class="my-2" />
 
         <x-link to="posts" class="font-mono font-sembold underline">see all posts</x-link>
     </section>

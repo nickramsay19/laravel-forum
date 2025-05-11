@@ -19,12 +19,11 @@
         <hr class="text-light-gamma" />
 
         <div class="flex flex-row gap-2 mt-2">
-            <button
+            <x-button
                 type="submit"
-                class="bg-dark-beta hover:bg-accent border border-accent text-light cursor-pointer px-0.5"
             >
                 Save
-            </button>
+            </x-button>
         </div>
     </form>
 </x-layout>

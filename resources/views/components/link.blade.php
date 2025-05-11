@@ -3,7 +3,7 @@
         {{ $slot }}
     </span>
 @else
-    <a href="{{ $href ?? route($to) }}" {{ $attributes->merge(['class' => 'text-accent hover:text-highlight no-underline']) }}>
+    <a href="{{ $href ?? route($to) }}" {{ $attributes->merge(['class' => 'text-accent-light hover:text-highlight no-underline']) }}>
         {{ $slot }}
     </a> 
 @endif

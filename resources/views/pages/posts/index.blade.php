@@ -77,7 +77,7 @@
             />
         </div>
 
-        <hr class="text-light-gamma last:hidden" />
+        <x-divider />
         
         <div id="posts-list" class="mt-2">
             <x-posts.list :posts="$posts" class="flex-none" />
