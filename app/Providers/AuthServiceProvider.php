@@ -39,6 +39,20 @@ class AuthServiceProvider extends ServiceProvider {
             if (!Auth::check()) {
                 return new Collection();
             }
+
+            $user = Auth::user();
+            $user->load('roles.permissions'); // avoid n+1
+
+            // Flatten all permissions across all roles
+            $permissions = $user->roles
+                ->flatMap(function ($role) {
+                    return $role->permissions;
+                })
+                ->unique('id') // Optional: ensure no duplicates
+                ->values();    // Optional: reset collection keys
+            
+            return $permissions->pluck('name');
+
             return Auth::user()->permissions()->pluck('name');
         });
 

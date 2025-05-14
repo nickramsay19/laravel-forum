@@ -48,9 +48,15 @@ class User extends Authenticatable {
     }
 
     public function permissions() {
-        return $this->belongsToMany(Permission::class, 'role_permissions', 'role_id', 'permission_id')
-            ->distinct();
+        //return $this->belongsToMany(Permission::class, 'role_permissions', 'role_id', 'permission_id')
+            //->distinct();
             //->join('user_roles', 'role_permissions.role_id', '=', 'user_roles.role_id')
             //->where('user_roles.user_id', $this->id);
+
+        return Permission::query()
+            ->join('role_permissions', 'permissions.id', '=', 'role_permissions.permission_id')
+            ->join('user_role', 'role_permissions.role_id', '=', 'user_role.role_id')
+            ->where('user_role.user_id', $this->id)
+            ->distinct();
     }
 }
