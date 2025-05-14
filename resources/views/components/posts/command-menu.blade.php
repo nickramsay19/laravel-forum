@@ -26,6 +26,6 @@
 
         @can ('delete', $post)
             <x-link hx-delete="{{ route('posts.destroy', $post->slug) }}" class="text-rose-500 underline cursor-pointer hover:font-semibold">delete</x-link>
-        @endif
+        @endcan
     </div>
 @endcan

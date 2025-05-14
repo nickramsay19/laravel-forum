@@ -75,6 +75,22 @@ class RoleController extends Controller {
 
     public function destroy(Role $role) {
         Gate::authorize('delete', $role);
-        return response($post)->header('HX-Redirect', route('roles'));
+        return response($role)->header('HX-Redirect', route('roles'));
+    }
+
+    public function destroyPermission(Role $role, Permission $permission) {
+        Gate::authorize('deletePermission', [$role, $permission]);
+
+        $role->permissions()->detach($permission);
+
+        return response($permission)->header('HX-Redirect', route('roles'));
+    }
+
+    public function destroyUser(Role $role, User $user) {
+        Gate::authorize('deleteUser', [$role, $user]);
+
+        $role->users()->detach($user);
+
+        return response($user)->header('HX-Redirect', route('roles'));
     }
 }

@@ -79,31 +79,41 @@ Route::group(['middleware' => 'web', 'guest'], function () {
         });
     });*/
 
-    Route::name('tags')->prefix('/tags')->group(function () {
-        Route::controller(TagController::class)->group(function () {
-            Route::get('/', 'index');
-            Route::get('/create', 'create')->name('.create');
-            Route::post('/', 'store')->name('.store');
-        
-            Route::prefix('/{tag:name}')->group(function() {
-                Route::get('/edit', 'edit')->name('.edit');
-                Route::put('/', 'update')->name('.update');
-                Route::delete('/', 'destroy')->name('.destroy');
-            });
+    Route::name('tags')->prefix('/tags')->controller(TagController::class)->group(function () {
+        Route::get('/', 'index');
+        Route::get('/create', 'create')->name('.create');
+        Route::post('/', 'store')->name('.store');
+    
+        Route::prefix('/{tag:name}')->group(function() {
+            Route::get('/edit', 'edit')->name('.edit');
+            Route::put('/', 'update')->name('.update');
+            Route::delete('/', 'destroy')->name('.destroy');
         });
     });
 
-    Route::name('roles')->prefix('/roles')->group(function () {
-        Route::controller(RoleController::class)->group(function () {
-            Route::get('/', 'index');
-            Route::get('/create', 'create')->name('.create');
-            Route::post('/', 'store')->name('.store');
+    Route::name('roles')->prefix('/roles')->controller(RoleController::class)->group(function () {
 
-            Route::prefix('/{role:name}')->group(function() {
-                Route::get('/', 'show')->name('.show');
-                Route::get('/edit', 'edit')->name('.edit');
-                Route::put('/', 'update')->name('.update');
-                Route::delete('/', 'destroy')->name('.destroy');
+        Route::get('/', 'index');
+        Route::get('/create', 'create')->name('.create');
+        Route::post('/', 'store')->name('.store');
+        
+        Route::prefix('/{role:name}')->group(function() {
+
+            Route::get('/', 'show')->name('.show');
+            Route::get('/edit', 'edit')->name('.edit');
+            Route::put('/', 'update')->name('.update');
+            Route::delete('/', 'destroy')->name('.destroy');
+        
+            Route::name('.permissions')->prefix('/permissions')->group(function () {
+                Route::prefix('/{permission:name}')->group(function() {
+                    Route::delete('/', 'destroyPermission')->name('.destroy');
+                });
+            });
+
+            Route::name('.users')->prefix('/users')->group(function () {
+                Route::prefix('/{user:name}')->group(function() {
+                    Route::delete('/', 'destroyUser')->name('.destroy');
+                });
             });
         });
     });
