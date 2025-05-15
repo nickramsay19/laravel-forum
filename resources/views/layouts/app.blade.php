@@ -23,12 +23,12 @@
         
         <title>{{ isset($title) ? ($title . ' | ') : '' }} apparatchiks.exnet.su</title>
     </head>
-    <body class="bg-bg-alpha text-fg-alpha text-md font-mono m-0" hx-headers='{"X-CSRF-TOKEN": "{{ csrf_token() }}"}'>
-        <div class="bg-bg-beta rounded-sm w-full md:w-60/100 m-0 md:m-auto mt-0 md:mt-2 p-1 px-2">
+    <body class="bg-bg-alpha dark:bg-dark-bg-alpha text-fg-alpha dark:text-dark-fg-alpha text-md font-mono m-0" hx-headers='{"X-CSRF-TOKEN": "{{ csrf_token() }}"}'>
+        <div class="bg-bg-beta dark:bg-dark-bg-beta rounded-sm w-full md:w-60/100 m-0 md:m-auto mt-0 md:mt-2 p-1 px-2">
             <header class="mb-2">
                 <div class="flex flex-row gap-1 justify-between w-full">
                     <span class="flex flex-inline align-middle gap-1 md:mb-2">
-                        <div class="inline align-middle [&_span]:first:text-bg-gamma *:inline *:align-middle *:my-auto">
+                        <div class="inline align-middle [&_span]:first:text-bg-gamma dark:[&_span]:first:text-dark-bg-gamma* :inline *:align-middle *:my-auto">
 
                             <x-nav.link to="home">apparatchiks.exnet.su</x-nav.link> 
                             <span>/</span>
@@ -52,7 +52,7 @@
                 </div>
 
                 <nav class="flex justify-between mb-1 border-b-2 border-b-fg0veta align-middle">
-                    <h1 class="border-b-0 heading-1 text-fg-beta font-bold border-0 self-end">{{ $attributes->get('title', 'apparatchiks.exnet.su') ?? 'apparatchiks.exnet.su' }}</h1>
+                    <h1 class="border-b-0 heading-1 text-fg-beta dark:text-dark-fg-beta font-bold border-0 self-end">{{ $attributes->get('title', 'apparatchiks.exnet.su') ?? 'apparatchiks.exnet.su' }}</h1>
                 </nav>
             </header>
 

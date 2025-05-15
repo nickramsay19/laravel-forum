@@ -162,6 +162,9 @@
     --color-fg-beta: var(--color-nordic-slate);
     --color-fg-gamma: var(--color-nordic-slate);
 
+    --color-dark-fg-alpha: #afa89d;
+    --color-dark-fg-beta: #afaa9d;
+
     /* = BACKGROUND = */
     --color-bg-alpha: var(--color-nordic-snow);
     --color-bg-beta: var(--color-nordic-snow);
@@ -170,10 +173,17 @@
     --color-bg-epsilon: var(--color-chicago-600);
     --color-bg-zeta: var(--color-chicago-300);
 
+    --color-dark-bg-alpha: #202325;
+    --color-dark-bg-beta: #202325;
+    --color-dark-bg-gamma: var(--color-monochrome-very-light-gray); /* TODO */
+    
     /* = PALETTE = */
     --color-accent: var(--color-indigo-800);
     --color-accent-light: var(--color-slate-950);
     --color-disabled: var(--color-light-gamma);
+
+    --color-dark-accent: #6a5ed8;
+    --color-dark-accent-light: #e0ddd9;
 }
 
 .heading-1 {
