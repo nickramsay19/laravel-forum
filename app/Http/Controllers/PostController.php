@@ -98,8 +98,11 @@ class PostController extends Controller {
             'published_at' => $request->safe()->published ? Carbon::now() : null,
         ]);
 
-        $post->tags()->attach(Tag::whereIn('name', $request->safe()->tags)->pluck('id'));
-
+        $tags = Tag::whereIn('name', $request->safe()->tags ?? []);
+        if ($tags->count() > 0) {
+            $post->tags()->attach($tags->pluck('id'));
+        }
+        
         return response($post)->header('HX-Redirect', route('posts.show', $post->slug));
     }
 

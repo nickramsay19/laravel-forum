@@ -1,6 +1,6 @@
 <x-layout title="Create">
-    <form hx-post="{{ route('posts.store') }}" hx-ext='json-enc-custom' class="flex flex-col">
-        
+    <x-form action="{{ route('posts.store') }}" class="flex flex-col">
+        hi?
         <x-input name="title" type="text" label="Title" placeholder="Your post's title" required />
 
         <x-input name="body" type="textarea" label="Body" placeholder="The post's contents..." rows="25" class="mt-3" />
@@ -31,5 +31,5 @@
                 Save & Publish
             </x-button>
         </div>
-    </form>
+    </x-form>
 </x-layout>
