@@ -29,7 +29,10 @@ class PostController extends Controller {
         
         $posts = Post::with('tags')
                 ->whereViewable()
-                ->whereIsListed()
+                ->where(function ($query) {
+                    $query->whereIsListed()
+                          ->orWhere('author_id', Auth::id());
+                })
                 ->whereSlugIn($request->get('slugs'))
                 ->whereTitleIn($request->get('titles'))
                 ->whereAuthorNameIn($authorNames)
