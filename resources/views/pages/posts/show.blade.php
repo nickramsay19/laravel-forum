@@ -17,7 +17,7 @@
 
         @if (Auth::check())
             <h3 class="text-lg font-semibold">Post a comment</h3>
-            <form hx-post="{{ route('comments.store') }}" hx-ext='json-enc-custom' class="flex flex-col mb-4">
+            <form hx-post="{{ route('comments.store') }}" hx-ext='json-enc' class="flex flex-col mb-4">
                 
                 <input type="hidden" name="post_id" value="{{ $post->id }}" />
                 <input type="hidden" name="reference_id" :value="null" />

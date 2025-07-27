@@ -1,5 +1,5 @@
 <x-layout title="Edit">
-    <form hx-put="{{ route('posts.update', ['post' => $post->slug]) }}" hx-ext='json-enc-custom' class="flex flex-col">
+    <form hx-put="{{ route('posts.update', ['post' => $post->slug]) }}" hx-ext='json-enc' class="flex flex-col">
         
         <x-input name="title" type="text" label="Title" placeholder="Your post's title" :value="$post->title" required />
 
