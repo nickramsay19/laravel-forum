@@ -186,6 +186,18 @@
     --color-dark-accent-light: #e0ddd9;
 }
 
+@media (prefers-color-scheme: dark) {
+    @theme inline {
+        --color-fg-alpha: var(--color-dark-fg-alpha);
+        --color-fg-beta: var(--color-dark-fg-beta);
+        --color-bg-alpha: var(--color-dark-bg-alpha);
+        --color-bg-beta: var(--color-dark-bg-beta);
+        --color-bg-gamma: var(--color-dark-bg-gamma);
+        --color-accent: var(--color-dark-accent);
+        --color-accent-light: var(--color-dark-accent-light);
+    }
+}
+
 .heading-1 {
     font-size: 1.5em; 
     text-decoration: none; 
@@ -253,4 +265,9 @@ input[type=submit]:hover, button:hover {
 
 .post-body a:visited {
     color: var(--color-dark-zeta);
+}
+
+.post-body details summary {
+    color: var(--color-accent);
+    font-weight: bold;
 }
