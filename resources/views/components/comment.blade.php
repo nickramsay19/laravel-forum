@@ -23,10 +23,10 @@
                     <x-link href="#" class="align-top basis-full grow font-semibold group-hover:underline">{{ Auth::user()->name }}</x-link>
                 </div>
 
-                <form hx-post="{{ route('comments.store') }}" hx-ext='json-enc-custom' class="flex flex-col">
+                <form hx-post="{{ route('comments.store') }}" hx-ext='json-enc' class="flex flex-col">
 
-                    <input type="hidden" name="post_id" value="{{ $comment->post_id }}" />
-                    <input type="hidden" name="reference_id" value="{{ $comment->id }}" />
+                    <x-input name="post_id" type="hidden" value="{{ $comment->post_id }}" />
+                    <x-input name="reference_id" type="hidden" value="{{ $comment->id }}" />
                     <x-input name="body" type="textarea" placeholder="The reply's content" rows="3" class="mt-1" />
                     <div class="flex flex-row gap-2 mt-2">
                         <x-button
