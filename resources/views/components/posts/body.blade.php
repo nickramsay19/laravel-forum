@@ -1,0 +1,1 @@
+<div class="post-body break-all wrap-anywhere hyphens-auto">{!! Illuminate\Mail\Markdown::parse($slot) !!}</div>

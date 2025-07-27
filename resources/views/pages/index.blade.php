@@ -1,7 +1,9 @@
-<x-layout title="The Apparatchiks Forum">
+<x-layout :title="$headerPost->title ?? 'The Apparatchiks Forum'">
     <section class="mt-2">
 
-        
+        <x-posts.body>
+            {{ $headerPost->body }}
+        </x-posts.body>
 
         <x-posts.list :posts="$posts" readonly />
 

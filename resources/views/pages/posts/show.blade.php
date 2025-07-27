@@ -11,7 +11,9 @@
             <x-posts.command-menu :post="$post" showIsListed="true" class="justify-end" />
         </div>
 
-        <div class="post-body">{!! Illuminate\Mail\Markdown::parse($post->body) !!}</div>
+        <x-posts.body>
+            {{ $post->body }}
+        </x-posts.body>
 
         <x-divider class="my-3" />
 
