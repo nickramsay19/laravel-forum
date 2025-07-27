@@ -5,6 +5,8 @@
             {{ $headerPost->body }}
         </x-posts.body>
 
+        <hr class="text-bg-gamma last:hidden my-2">
+
         <x-posts.list :posts="$posts" readonly />
 
         <x-divider class="my-2" />
